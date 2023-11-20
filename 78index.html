@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Functions</title>
+</head>
+<body>
+
+<script>
+    // Робота з класом Array
+    function modifyArray() {
+        var myArray = [1, 2, 3, 4, 5];
+
+        // Додає новий елемент "start" на початок масиву.
+        myArray.unshift("start");
+
+        // Видаляє останній елемент масиву.
+        myArray.pop();
+
+        // Змінює значення другого елементу масиву на "modified".
+        if (myArray.length > 1) {
+            myArray[1] = "modified";
+        }
+
+        // Виводить модифікований масив в консоль (можна використовувати alert для виведення на екран).
+        console.log(myArray);
+    }
+
+    // Робота з методами класу Array
+    function agtau() {
+        var myArray = [1, 2, 3, 4, 5];
+
+        // Додає новий елемент "end" в кінець масиву.
+        myArray.push("end");
+
+        // Видаляє перший елемент масиву.
+        myArray.shift();
+
+        // Використовує метод splice для вставки нового елементу "middle" після третього елемента масиву.
+        myArray.splice(3, 0, "middle");
+
+        // Виводить модифікований масив в консоль (можна використовувати alert для виведення на екран).
+        console.log(myArray);
+    }
+
+    // Робота з класом Number
+    function checkInteger() {
+        var myNumber = 5.0;
+
+        // Перевіряє, чи число ціле.
+        var result = Number.isInteger(myNumber) ? "Число ціле" : "Число не ціле";
+
+        // Виводить результат в консоль (можна використовувати alert для виведення на екран).
+        console.log(result);
+    }
+
+    // Викликає функції при завантаженні сторінки.
+    window.onload = function() {
+        modifyArray();
+        agtau();
+        checkInteger();
+    };
+</script>
+
+</body>
+</html>
